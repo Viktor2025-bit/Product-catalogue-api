@@ -1,19 +1,62 @@
-# Product Catalog API
-
-A RESTful API for managing a product catalog with full CRUD operations, built with Node.js and Express.
-
-## Features
-
-- CRUD operations for products
-- Search and filter products by various criteria
-- Comprehensive error handling
-- Unit tests with Jest and Supertest
-- API documentation with Swagger
-- CI/CD pipeline with GitHub Actions
-
-## Setup Instructions
-
+Product Catalog API
+A RESTful API for managing a product catalog with full CRUD operations, built with Node.js and
+Express.
+Features
+•
+•
+•
+•
+•
+•
+CRUD operations for products (name, price, stock)
+Search and filter products by name
+Comprehensive error handling with appropriate status codes (e.g., 201, 400, 404)
+Unit tests with Jest and Supertest for core functionality
+API documentation with Swagger
+CI/CD pipeline with GitHub Actions
+Setup Instructions
 1. Clone the repository:
-```bash
-git clone https://github.com/Viktor2025-bit/Product-catalogue-api.git
-cd product-catalog-api
+git clone https://github.com/Viktor2025-bit/product-catalogue-api.git
+cd product-catalogue-api
+2. Install dependencies:
+yarn install
+3. Run the server:
+yarn dev
+- The API will be available at http://localhost:7000
+- Swagger documentation: http://localhost:7000/api-docs
+4. Run tests:
+yarn test
+API Endpoints
+•
+•
+•
+•
+•
+•
+POST /products/create-product: Create a product (requires name, price, stock in JSON body)
+GET /products/all-products: List all products
+GET /products/search?search=term: Search products by name (case-insensitive)
+GET /products/:id: Get product by ID
+PUT /products/:id: Update product (partial updates allowed)
+DELETE /products/:id: Delete product
+Assumptions
+•
+•
+•
+•
+An in-memory data store (array) is used instead of a persistent database.
+The search endpoint filters by product name only, implemented as a basic feature.
+No external dependencies (e.g., database or cloud services) are configured, focusing on core API
+logic.
+Error handling covers invalid inputs, non-existent products, and server issues.CI/CD
+A GitHub Actions workflow is configured to run tests automatically on push and pull requests.
+Notes
+•
+•
+•
+Ensure Node.js is installed (version 16 or later recommended).
+The codebase follows a modular structure with service and controller layers.
+The README, code, and tests are designed to meet the technical assessment requirements.
+Submission Details
+Repository link: https://github.com/Viktor2025-bit/product-catalogue-api
+All files are included in the repository, ready for review.
