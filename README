@@ -60,3 +60,9 @@ The README, code, and tests are designed to meet the technical assessment requir
 Submission Details
 Repository link: https://github.com/Viktor2025-bit/product-catalogue-api
 All files are included in the repository, ready for review.
+
+
+Note: You can also use npm as an alternative to yarn if preferred:
+npm install
+npm run dev
+npm test
